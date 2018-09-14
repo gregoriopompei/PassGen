@@ -1,5 +1,5 @@
 # PassGen
-Here's my Password Generator
+Here's my Password Generator v0.9.2
 
 ## Git setup
 * Download the repository: 'https://github.com/gregoriopompei/PassGen.git'
