@@ -1,6 +1,3 @@
-= "italian"
-2 = "english"
-
 print "Select language [Ita][Eng]\n"
 lang = gets.chomp
 print "Insert your password length:\n"
@@ -13,5 +10,3 @@ password = gets.chomp
   (0...password.to_i).map {('a'..'z').to_a[rand(15)] }.join
 
   print "This is your password : #{string}\n"  
-
-print #{lang}
