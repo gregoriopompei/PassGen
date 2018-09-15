@@ -19,6 +19,25 @@ else
 	print "#{user_lang} is an invalid option.\n"
 end
 
+#start generator
+#
+
+progress = 'Loading < '
+1000.times do |i|
+
+j = i + 1
+
+  if j % 20 == 0
+    progress << "·"
+    print "\r"
+    print progress + " > #{j / 10}%"
+    $stdout.flush
+    sleep 0.05
+  end
+end
+
+#
+
 File.open("languages/#{lang}"){|f|
   line = nil
   1.times { line = f.gets }
