@@ -1,5 +1,5 @@
 # PassGen
-Here's my Password Generator
+Here's my Password Generator v1.0.3
 
 ## Git setup
 * Download the repository: 'https://github.com/gregoriopompei/PassGen.git'
@@ -8,3 +8,7 @@ Here's my Password Generator
 * Run the rubyscript with the following command `ruby PassGen.rb`
 * Insert the length of the password and press enter.
 
+#### Changelog
+##### v1.0.3 
+* Added 2 new languages: Italian and Spanish 
+* Fixed some bugs
