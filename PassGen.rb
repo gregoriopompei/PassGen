@@ -76,10 +76,6 @@ File.open("languages/#{lang}"){|f|
 
 sleep 2.5
 
-print "Select language [Ita][Eng]\n"
-lang = gets.chomp
-print "Insert your password length:\n"
-password = gets.chomp
   o = [('a'..'z'), ('A'..'Z'), (0 .. 9)].map { |i| i.to_a }.flatten
   string = (0...password.to_i).map { o[rand(o.length)] }.join
 
