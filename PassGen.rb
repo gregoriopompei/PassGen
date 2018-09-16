@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #select language
 
@@ -77,6 +78,12 @@ File.open("languages/#{lang}"){|f|
 
 sleep 2.5
 
+=======
+print "Select language [Ita][Eng]\n"
+lang = gets.chomp
+print "Insert your password length:\n"
+password = gets.chomp
+>>>>>>> c071d433552e198316cfb23ed204213907e4a3e6
   o = [('a'..'z'), ('A'..'Z'), (0 .. 9)].map { |i| i.to_a }.flatten
   string = (0...password.to_i).map { o[rand(o.length)] }.join
 
@@ -84,6 +91,7 @@ sleep 2.5
 
   (0...password.to_i).map {('a'..'z').to_a[rand(15)] }.join
 
+<<<<<<< HEAD
 #result
 if user_lang == 1
         puts "Spero che | #{string} | sia una buona password per te :) \nCiao!"
@@ -93,3 +101,6 @@ elsif user_lang == 3
         puts "Yo espero que | #{string} | es buena para ti como contraseña :) \n¡Adiós!"
 end
 
+=======
+  print "This is your password : #{string}\n"  
+>>>>>>> c071d433552e198316cfb23ed204213907e4a3e6
