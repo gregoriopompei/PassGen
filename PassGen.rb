@@ -1,12 +1,16 @@
+
 #select language
 
 lang = ""
+
+print "Please, select your language: \n"
+
+sleep 0.5
 
 puts "1. Italian"
 puts "2. English"
 puts "3. Spanish"
 
-print "Please, select your language: "
 user_lang = gets.to_i
 
 if user_lang == 1
@@ -16,7 +20,7 @@ elsif user_lang == 2
 elsif user_lang == 3
 	lang = "spanish"
 else
-	print "#{user_lang} is an invalid option.\n"
+	print "I don't know this language, sorry.\n"
 end
 
 #start generator
@@ -38,12 +42,41 @@ end
 
 #
 
+#welcome
 File.open("languages/#{lang}"){|f|
   line = nil
   1.times { line = f.gets }
-  puts "\n#{line}"
+  puts "\n#{line}\n"
 }
-password = gets.chomp
+
+#name
+File.open("languages/#{lang}"){|f|
+  line = nil
+  2.times { line = f.gets }
+  puts "\n#{line}\n"
+}
+
+name = gets.chomp
+
+if user_lang == 1
+        puts "Ok #{name}, inserisci la lunghezza della password: "
+elsif user_lang == 2
+        puts "Ok #{name}, insert your password's lenght: "
+elsif user_lang == 3
+        puts "Ok #{name}, Escribes la longitud tuyo contraseña: "
+end
+
+password = gets.to_i
+
+#thinking
+File.open("languages/#{lang}"){|f|
+  line = nil
+  3.times { line = f.gets }
+  puts "#{line}\n"
+}
+
+sleep 2.5
+
   o = [('a'..'z'), ('A'..'Z'), (0 .. 9)].map { |i| i.to_a }.flatten
   string = (0...password.to_i).map { o[rand(o.length)] }.join
 
@@ -51,5 +84,12 @@ password = gets.chomp
 
   (0...password.to_i).map {('a'..'z').to_a[rand(15)] }.join
 
-  print "This is your password : #{string}\n"
+#result
+if user_lang == 1
+        puts "Spero che | #{string} | sia una buona password per te :) \nCiao!"
+elsif user_lang == 2
+        puts "I hope that | #{string} | is a good password for you :) \nBye"
+elsif user_lang == 3
+        puts "Yo espero que | #{string} | es buena para ti como contraseña :) \n¡Adiós!"
+end
 
